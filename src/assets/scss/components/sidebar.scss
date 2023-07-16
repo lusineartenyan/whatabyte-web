@@ -1,0 +1,45 @@
+
+@import '../../scss/base/global';
+
+.content {
+    width: 100vw;
+    height: 100vw;
+    background: $main-bg-color;
+    max-height: 100%;
+
+    @include flexbox();
+
+    color: white;
+
+    .sidebar {
+        height: 100%;
+        width: 300px;
+        background-color: $sidebar-bg-color;
+
+        header {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        nav {
+            @include flexbox($placeContent: center);
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+        
+                li {
+                    font-size: 0.8750em;
+                    width: 100%;
+                    color: $main-text-color;
+                    padding-bottom: 20px;
+                    list-style-type: none;
+                    cursor: pointer;
+
+                    @include flexbox($justifyContent: left, $gap: 15px);
+                }
+            }
+        }
+    }
+}

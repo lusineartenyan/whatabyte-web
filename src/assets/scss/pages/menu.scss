@@ -1,0 +1,18 @@
+@import "../../scss/base/global";
+
+.thumb {
+  text-align: center;
+}
+
+.thumb img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.menu-grid {
+  cursor: pointer;
+  padding-left: 20px;
+
+  @include flexbox($wrap: wrap, $gap: 15px);
+}
