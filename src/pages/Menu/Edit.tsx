@@ -16,6 +16,7 @@ const Edit: React.FC<Props> = () => {
   };
   const handleSubmit = (details: any) => {
     menuService.saveMenuItem(details);
+    navigate("/menu");
   };
   const [details, setDetails] = useState({});
   let idInt = 0;

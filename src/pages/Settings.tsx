@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react'
+import { useState } from 'react'
 import InputText from "../components/form/InputText";
 import Text from "../components/ui/Text";
 import Button from "../components/form/Button";
