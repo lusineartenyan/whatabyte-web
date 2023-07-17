@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+
 import { MenuService } from "../../apis/MenuService";
-import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Text from "../../components/ui/Text";
 import Button from "../../components/form/Button";
@@ -17,7 +16,6 @@ interface Props {
 
 const Delete = (props: Props) => {
   const navigate = useNavigate();
-  const { name, description, image, isDelete } = props;
 
   const deleteItem = () => {
     menuService.deleteMenuItem(props.id).then(() => {
@@ -25,8 +23,8 @@ const Delete = (props: Props) => {
     });
   };
 
-  const ss = () => {
-    alert("as");
+  const cancel = () => {
+    navigate("/menu");
   };
 
   return (
@@ -49,7 +47,7 @@ const Delete = (props: Props) => {
 
       <div className="btn-group-vertical">
         <Button onClick={deleteItem}>Delete</Button>
-        <Button onClick={ss}>Cancel</Button>
+        <Button onClick={cancel}>Cancel</Button>
       </div>
     </div>
   );

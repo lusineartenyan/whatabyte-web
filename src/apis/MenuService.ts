@@ -1,10 +1,7 @@
-import { items } from "../data/items";
-
 const baseUrl = "http://localhost:3000/menu-items";
 
 export class MenuService {
   private static instance: MenuService;
-  private errorMsg?: string;
 
   public static getInstance(): MenuService {
     if (!MenuService.instance) {
@@ -22,6 +19,7 @@ export class MenuService {
       return itemsJson;
     } catch (error: any) {
       errorMsg = error.message;
+      return errorMsg;
     }
   }
 
